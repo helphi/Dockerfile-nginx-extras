@@ -2,7 +2,7 @@
 
 ## Tags
 
-- `1.14.2`
+- `1.16.1`
 
 ## Usage
 
@@ -16,7 +16,7 @@ chown -R www-data:www-data /usr/share/nginx/html
 docker run -d --name=ng \
   -p 80:80 \
   -v /usr/share/nginx/html:/usr/share/nginx/html \
-  helphi/nginx-extras:1.14.2
+  helphi/nginx-extras:1.16.1
 
 ######## test webdav ########
 

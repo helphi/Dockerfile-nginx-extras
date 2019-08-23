@@ -1,7 +1,7 @@
 FROM nginx:1.16.1
 
 RUN apt update &&\
-    DEBIAN_FRONTEND=noninteractive apt install -y nginx-extras=1.14.2-2 --no-install-recommends &&\
+    DEBIAN_FRONTEND=noninteractive apt install -y nginx-extras --no-install-recommends &&\
     apt autoremove -y && apt clean && rm -rf /var/lib/apt/lists* /tmp/* /var/tmp/*
 
 RUN sed -i '/location \/ {/i\client_max_body_size 1G;' /etc/nginx/conf.d/default.conf &&\
